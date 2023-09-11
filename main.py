@@ -11,11 +11,14 @@ def escolha_computador():
 
     escolhaUsuario = escolha_usuario()
 
-    if escolhaComputador == escolhaUsuario:
-        print("Empate!")
-    elif escolhaComputador == "pedra" and escolhaUsuario == "papel" or escolhaComputador == "papel" and escolhaUsuario == "tesoura":
-        print("Você venceu! A escolha do computador foi: ", escolhaComputador)
-    else:
-        print("Você perdeu! A escolha do computador foi: ", escolhaComputador)
+    if escolhaUsuario in opcoes:
+        if escolhaComputador == escolhaUsuario:
+            print("Empate!")
+        elif escolhaComputador == "pedra" and escolhaUsuario == "papel" or escolhaComputador == "papel" and escolhaUsuario == "tesoura":
+            print("Você venceu! A escolha do computador foi: ", escolhaComputador)
+        else:
+            print("Você perdeu! A escolha do computador foi: ", escolhaComputador)
+    else: 
+            print("Escolha uma das opções validas!")
         
 escolha_computador()
